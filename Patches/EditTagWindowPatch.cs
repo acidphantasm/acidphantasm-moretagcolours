@@ -21,15 +21,15 @@ namespace acidphantasm_moretagcolours.Patches
             new Color(0.463f, 0f, 1f),
             new Color(1f, 0f, 0.549f),
 
-            new Color(0.271f, 0.122f, 0.122f),
-            new Color(0.271f, 0.2f, 0.122f),
-            new Color(0.271f, 0.267f, 0.122f),
-            new Color(0.153f, 0.271f, 0.122f),
+            new Color(0.349f, 0.122f, 0.122f),
+            new Color(0.18f, 0.106f, 0.024f),
+            new Color(0.349f, 0.267f, 0.122f),
+            new Color(0.106f, 0.329f, 0.067f),
             new Color(0.122f, 0.271f, 0.247f),
-            new Color(0.122f, 0.2f, 0.271f),
-            new Color(0.137f, 0.122f, 0.271f),
-            new Color(0.188f, 0.122f, 0.271f),
-            new Color(0.271f, 0.122f, 0.204f),
+            new Color(0.071f, 0.22f, 0.349f),
+            new Color(0.067f, 0.047f, 0.251f),
+            new Color(0.165f, 0.051f, 0.302f),
+            new Color(0.278f, 0.047f, 0.176f),
         };
 
         protected override MethodBase GetTargetMethod()
