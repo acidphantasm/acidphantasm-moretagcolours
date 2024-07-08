@@ -1,24 +1,8 @@
 ﻿using SPT.Reflection.Patching;
 using HarmonyLib;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using EFT;
-using System.Runtime.CompilerServices;
 using EFT.UI;
 using UnityEngine;
-using EFT.InventoryLogic;
-using JetBrains.Annotations;
-using TMPro;
-using UnityEngine.Events;
-using UnityEngine.EventSystems;
-using EFT.UI.DragAndDrop;
-using EFT.UI.Ragfair;
-using UnityEngine.UI;
-using Comfort.Common;
 
 namespace acidphantasm_moretagcolours.Patches
 {

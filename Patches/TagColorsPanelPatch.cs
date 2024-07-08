@@ -1,7 +1,6 @@
 ﻿using EFT.UI;
 using HarmonyLib;
 using SPT.Reflection.Patching;
-using System;
 using System.Reflection;
 using UnityEngine;
 
