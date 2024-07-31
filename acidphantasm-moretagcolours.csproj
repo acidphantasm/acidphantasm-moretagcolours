@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\MoreTagColoursConfig.cs" />
     <Compile Include="Patches\EditTagWindowPatch.cs" />
     <Compile Include="Patches\TagColorsPanelPatch.cs" />
     <Compile Include="Plugin.cs" />
