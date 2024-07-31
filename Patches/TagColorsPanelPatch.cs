@@ -10,8 +10,6 @@ namespace acidphantasm_moretagcolours.Patches
     {
         protected override MethodBase GetTargetMethod()
         {
-            //methods are patched by targeting both their class name and the name of the method itself.
-            //the example in this patch is the Jump() method in the Player class
             return AccessTools.Method(typeof(TagColorsPanel), nameof(TagColorsPanel.Show));
         }
 

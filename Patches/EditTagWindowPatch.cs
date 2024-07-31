@@ -3,6 +3,8 @@ using HarmonyLib;
 using System.Reflection;
 using EFT.UI;
 using UnityEngine;
+using Comfort.Common;
+using acidphantasm_moretagcolours.Config;
 
 namespace acidphantasm_moretagcolours.Patches
 {
@@ -11,25 +13,35 @@ namespace acidphantasm_moretagcolours.Patches
 
         public static readonly Color[] color_0 = new Color[]
         {
-            new Color(1f, 0f, 0f),
-            new Color(1f, 0.5f, 0f),
-            new Color(1f, 1f, 0f),
-            new Color(0.224f, 1f, 0f),
-            new Color(0f, 1f, 0.859f),
-            new Color(0f, 0.529f, 1f),
-            new Color(0.102f, 0f, 1f),
-            new Color(0.463f, 0f, 1f),
-            new Color(1f, 0f, 0.549f),
+            MoreTagColoursConfig.Colour01.Value,
+            MoreTagColoursConfig.Colour02.Value,
+            MoreTagColoursConfig.Colour03.Value,
+            MoreTagColoursConfig.Colour04.Value,
+            MoreTagColoursConfig.Colour05.Value,
+            MoreTagColoursConfig.Colour06.Value,
+            MoreTagColoursConfig.Colour07.Value,
+            MoreTagColoursConfig.Colour08.Value,
+            MoreTagColoursConfig.Colour09.Value,
 
-            new Color(0.349f, 0.122f, 0.122f),
-            new Color(0.18f, 0.106f, 0.024f),
-            new Color(0.349f, 0.267f, 0.122f),
-            new Color(0.106f, 0.329f, 0.067f),
-            new Color(0.122f, 0.271f, 0.247f),
-            new Color(0.071f, 0.22f, 0.349f),
-            new Color(0.067f, 0.047f, 0.251f),
-            new Color(0.165f, 0.051f, 0.302f),
-            new Color(0.278f, 0.047f, 0.176f),
+            MoreTagColoursConfig.Colour10.Value,
+            MoreTagColoursConfig.Colour11.Value,
+            MoreTagColoursConfig.Colour12.Value,
+            MoreTagColoursConfig.Colour13.Value,
+            MoreTagColoursConfig.Colour14.Value,
+            MoreTagColoursConfig.Colour15.Value,
+            MoreTagColoursConfig.Colour16.Value,
+            MoreTagColoursConfig.Colour17.Value,
+            MoreTagColoursConfig.Colour18.Value,
+
+            new Color(0.1f, 0.1f, 0.1f),
+            new Color(0.2f, 0.2f, 0.2f),
+            new Color(0.3f, 0.3f, 0.3f),
+            new Color(0.4f, 0.4f, 0.4f),
+            new Color(0.5f, 0.5f, 0.5f),
+            new Color(0.6f, 0.6f, 0.6f),
+            new Color(0.7f, 0.7f, 0.7f),
+            new Color(0.8f, 0.8f, 0.8f),
+            new Color(0.9f, 0.9f, 0.9f),
         };
 
         protected override MethodBase GetTargetMethod()
@@ -59,13 +71,10 @@ namespace acidphantasm_moretagcolours.Patches
             return typeof(EditTagWindow).GetMethod("Show",  BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
         }
 
-
         [PatchPostfix]
-        public static void Postfix()
+        public static void Postfix(EditTagWindow __instance)
         {
-            GameObject tagWindow = GameObject.Find("EditTagWindowTemplate(Clone)");
-
-            tagWindow.GetComponent<RectTransform>().sizeDelta = new Vector2(450, 230);
+            __instance.GetComponent<RectTransform>().sizeDelta = new Vector2(450, 260);
         }
     }
 }
