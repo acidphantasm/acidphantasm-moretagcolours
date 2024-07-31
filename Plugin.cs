@@ -1,5 +1,6 @@
 ﻿using BepInEx;
 using acidphantasm_moretagcolours.Patches;
+using acidphantasm_moretagcolours.Config;
 
 namespace acidphantasm_moretagcolours
 {
@@ -10,6 +11,8 @@ namespace acidphantasm_moretagcolours
         private void Awake()
         {
             Logger.LogInfo("[MoreTagColours] loading...");
+
+            MoreTagColoursConfig.InitConfig(Config);
 
             new GetColorPatch().Enable();
             new TagColorsPanelPatch().Enable();
