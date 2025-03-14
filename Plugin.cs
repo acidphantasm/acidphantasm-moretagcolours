@@ -4,8 +4,7 @@ using acidphantasm_moretagcolours.Config;
 
 namespace acidphantasm_moretagcolours
 {
-    [BepInPlugin("phantasm.acid.moretagcolours", "acidphantasm-MoreTagColours", "1.2.0")]
-    [BepInDependency("com.SPT.core", "3.10.0")]
+    [BepInPlugin("com.acidphantasm.moretagcolours", "acidphantasm-MoreTagColours", "1.3.0")]
     public class Plugin : BaseUnityPlugin
     {
         private void Awake()
