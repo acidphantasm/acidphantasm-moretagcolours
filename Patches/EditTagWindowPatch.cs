@@ -4,15 +4,15 @@ using System.Reflection;
 using EFT.UI;
 using UnityEngine;
 using Comfort.Common;
-using acidphantasm_moretagcolours.Config;
+using MoreTagColours.Config;
 
-namespace acidphantasm_moretagcolours.Patches
+namespace MoreTagColours.Patches
 {
     internal class GetColorPatch : ModulePatch
     {
 
-        public static readonly Color[] color_0 = new Color[]
-        {
+        public static readonly Color[] Color0 =
+        [
             MoreTagColoursConfig.Colour01.Value,
             MoreTagColoursConfig.Colour02.Value,
             MoreTagColoursConfig.Colour03.Value,
@@ -33,32 +33,30 @@ namespace acidphantasm_moretagcolours.Patches
             MoreTagColoursConfig.Colour17.Value,
             MoreTagColoursConfig.Colour18.Value,
 
-            new Color(0.1f, 0.1f, 0.1f),
-            new Color(0.2f, 0.2f, 0.2f),
-            new Color(0.3f, 0.3f, 0.3f),
-            new Color(0.4f, 0.4f, 0.4f),
-            new Color(0.5f, 0.5f, 0.5f),
-            new Color(0.6f, 0.6f, 0.6f),
-            new Color(0.7f, 0.7f, 0.7f),
-            new Color(0.8f, 0.8f, 0.8f),
-            new Color(0.9f, 0.9f, 0.9f),
-        };
+            new(0.1f, 0.1f, 0.1f),
+            new(0.2f, 0.2f, 0.2f),
+            new(0.3f, 0.3f, 0.3f),
+            new(0.4f, 0.4f, 0.4f),
+            new(0.5f, 0.5f, 0.5f),
+            new(0.6f, 0.6f, 0.6f),
+            new(0.7f, 0.7f, 0.7f),
+            new(0.8f, 0.8f, 0.8f),
+            new(0.9f, 0.9f, 0.9f)
+        ];
 
         protected override MethodBase GetTargetMethod()
         {
-            //methods are patched by targeting both their class name and the name of the method itself.
-            //the example in this patch is the Jump() method in the Player class
             return AccessTools.Method(typeof(EditTagWindow), nameof(EditTagWindow.GetColor));
         }
 
         [PatchPrefix]
         public static bool Prefix(ref Color __result, int colorIndex)
         {
-            if (colorIndex >= GetColorPatch.color_0.Length)
+            if (colorIndex >= Color0.Length)
             {
                 colorIndex = 0;
             }
-            __result = GetColorPatch.color_0[colorIndex];
+            __result = Color0[colorIndex];
             return false;
         }
     }
@@ -66,9 +64,7 @@ namespace acidphantasm_moretagcolours.Patches
     {
         protected override MethodBase GetTargetMethod()
         {
-            //methods are patched by targeting both their class name and the name of the method itself.
-            //the example in this patch is the Jump() method in the Player class
-            return typeof(EditTagWindow).GetMethod("Show",  BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
+            return AccessTools.Method(typeof(EditTagWindow), nameof(EditTagWindow.Show));
         }
 
         [PatchPostfix]

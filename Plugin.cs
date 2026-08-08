@@ -1,23 +1,19 @@
 ﻿using BepInEx;
-using acidphantasm_moretagcolours.Patches;
-using acidphantasm_moretagcolours.Config;
+using MoreTagColours.Patches;
+using MoreTagColours.Config;
 
-namespace acidphantasm_moretagcolours
+namespace MoreTagColours
 {
-    [BepInPlugin("com.acidphantasm.moretagcolours", "acidphantasm-MoreTagColours", "1.4.0")]
+    [BepInPlugin("com.acidphantasm.moretagcolours", "acidphantasm-moretagcolours", "1.5.0")]
     public class Plugin : BaseUnityPlugin
     {
         private void Awake()
         {
-            Logger.LogInfo("[MoreTagColours] loading...");
-
             MoreTagColoursConfig.InitConfig(Config);
 
             new GetColorPatch().Enable();
             new TagColorsPanelPatch().Enable();
             new ResizeWindowPatch().Enable();
-
-            Logger.LogInfo("[MoreTagColours] loaded!");
         }
     }
 }

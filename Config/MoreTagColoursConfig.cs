@@ -1,9 +1,9 @@
-﻿using acidphantasm_moretagcolours.Patches;
+﻿using MoreTagColours.Patches;
 using BepInEx.Configuration;
 using System;
 using UnityEngine;
 
-namespace acidphantasm_moretagcolours.Config
+namespace MoreTagColours.Config
 {
     internal static class MoreTagColoursConfig
     {
@@ -71,24 +71,24 @@ namespace acidphantasm_moretagcolours.Config
 
         private static void Colours_SettingChanged(object sender, EventArgs e)
         {
-            GetColorPatch.color_0[0] = Colour01.Value;
-            GetColorPatch.color_0[1] = Colour02.Value;
-            GetColorPatch.color_0[2] = Colour03.Value;
-            GetColorPatch.color_0[3] = Colour04.Value;
-            GetColorPatch.color_0[4] = Colour05.Value;
-            GetColorPatch.color_0[5] = Colour06.Value;
-            GetColorPatch.color_0[6] = Colour07.Value;
-            GetColorPatch.color_0[7] = Colour08.Value;
-            GetColorPatch.color_0[8] = Colour09.Value;
-            GetColorPatch.color_0[9] = Colour10.Value;
-            GetColorPatch.color_0[10] = Colour11.Value;
-            GetColorPatch.color_0[11] = Colour12.Value;
-            GetColorPatch.color_0[12] = Colour13.Value;
-            GetColorPatch.color_0[13] = Colour14.Value;
-            GetColorPatch.color_0[14] = Colour15.Value;
-            GetColorPatch.color_0[15] = Colour16.Value;
-            GetColorPatch.color_0[16] = Colour17.Value;
-            GetColorPatch.color_0[17] = Colour18.Value;
+            GetColorPatch.Color0[0] = Colour01.Value;
+            GetColorPatch.Color0[1] = Colour02.Value;
+            GetColorPatch.Color0[2] = Colour03.Value;
+            GetColorPatch.Color0[3] = Colour04.Value;
+            GetColorPatch.Color0[4] = Colour05.Value;
+            GetColorPatch.Color0[5] = Colour06.Value;
+            GetColorPatch.Color0[6] = Colour07.Value;
+            GetColorPatch.Color0[7] = Colour08.Value;
+            GetColorPatch.Color0[8] = Colour09.Value;
+            GetColorPatch.Color0[9] = Colour10.Value;
+            GetColorPatch.Color0[10] = Colour11.Value;
+            GetColorPatch.Color0[11] = Colour12.Value;
+            GetColorPatch.Color0[12] = Colour13.Value;
+            GetColorPatch.Color0[13] = Colour14.Value;
+            GetColorPatch.Color0[14] = Colour15.Value;
+            GetColorPatch.Color0[15] = Colour16.Value;
+            GetColorPatch.Color0[16] = Colour17.Value;
+            GetColorPatch.Color0[17] = Colour18.Value;
         }
     }
 }

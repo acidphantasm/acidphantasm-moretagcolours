@@ -4,7 +4,7 @@ using SPT.Reflection.Patching;
 using System.Reflection;
 using UnityEngine;
 
-namespace acidphantasm_moretagcolours.Patches
+namespace MoreTagColours.Patches
 {
     internal class TagColorsPanelPatch : ModulePatch
     {
@@ -16,7 +16,7 @@ namespace acidphantasm_moretagcolours.Patches
         [PatchPrefix]
         public static void Prefix(ref Color[] colors)
         {
-            colors = GetColorPatch.color_0;
+            colors = GetColorPatch.Color0;
         }
     }
 }
